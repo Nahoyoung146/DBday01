@@ -25,8 +25,7 @@ insert into person values(1011, '1111','1111','1111');
 select * from person;
 select num, name from person;
 select * from person where num = 1001;
-select * from person where num = '고길동';
-
+select * from person where name = '고길동';
 update person set name= '111',tel='1234';
 update person set name= '고길동' where num=1001;
 delete from person where num=1011;
