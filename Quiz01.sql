@@ -1,10 +1,9 @@
 create table STUDENT(
-    id varchar2(10),
-    name varchar2(10),
+    id varchar2(10) primary key,
+    name varchar2(10) not null,
     kor varchar2(5),
     eng varchar2(5),
-    math varchar2(5),
-    primary key(id)
+    math varchar2(5)
 );
 
 desc STUDENT;
@@ -18,3 +17,11 @@ select * from STUDENT;
 commit;
 delete from STUDENT;
 rollback;
+
+create table test_table (num number);
+desc test_table;
+alter table test_table add (name varchar2(20));
+alter table test_table modify (name number);
+alter table test_table drop column name;
+alter table test_table rename column num to num_to;
+drop table test_table;
